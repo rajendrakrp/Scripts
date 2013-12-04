@@ -6,7 +6,6 @@ def parse_file(txt_file):
 
     """ 
         Parses file and generates list of lists. Raises exception, if the file is not in proper format. 
-        List comprehension can't be used here as it is not possible to raise exception. 
     """
 
     ll_numbers = []
@@ -18,6 +17,7 @@ def parse_file(txt_file):
                 raise Exception, "Not in proper format at line: %s" % (i + 1)
             ll_numbers.append([int(n) for n in splitted])
             #ll_numbers = [[int(n) for n in l.split()] for i, l in enumerate(f) if not len(l.split()) == i+1: raise Exception]
+            #List comprehension can't be used here as it is not possible to raise exception. 
         return ll_numbers
     except Exception, e:
         print "Exception while parsing:", e
