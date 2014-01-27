@@ -5,7 +5,6 @@ import time
 def parse_file(txt_file):
 
     """ Parses file and generates list of lists. Raises exception, if the file is not in proper format. """
-    """ Parses file and generates list of lists. Raises exception, if the file is not in proper format. """
 
     ll_numbers = []
     try:
